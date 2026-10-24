@@ -83,10 +83,10 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
         "${PROJECT_ROOT}/faiss.dll"
         "$<TARGET_FILE_DIR:${PROJECT_NAME}>"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "D:/OpenSSL-Win64/bin/libssl-4-x64.dll"
+        "${OPENSSL_ROOT_DIR}/bin/libssl-4-x64.dll"
         "$<TARGET_FILE_DIR:${PROJECT_NAME}>"
     COMMAND ${CMAKE_COMMAND} -E copy_if_different
-        "D:/OpenSSL-Win64/bin/libcrypto-4-x64.dll"
+        "${OPENSSL_ROOT_DIR}/bin/libcrypto-4-x64.dll"
         "$<TARGET_FILE_DIR:${PROJECT_NAME}>"
     COMMENT "拷贝 index.html, faiss.dll, OpenSSL DLL"
 )

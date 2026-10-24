@@ -1,7 +1,8 @@
 @echo off
 setlocal
 
-set "PROJECT_DIR=D:\ChatBot Project\ChatBot"
+set "PROJECT_DIR=%~dp0"
+if "%PROJECT_DIR:~-1%"=="\" set "PROJECT_DIR=%PROJECT_DIR:~0,-1%"
 set "BUILD_DIR=%PROJECT_DIR%\build"
 set "EXE_DIR=%BUILD_DIR%\bin\Release"
 set "EXE_NAME=ChatBot.exe"
